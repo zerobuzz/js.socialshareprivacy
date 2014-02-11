@@ -3,7 +3,7 @@ import js.jquery
 
 library = Library('jquery.socialshareprivacy', 'resources')
 
-css = Resource(library, 'socialshareprivacy.css')
+css = Resource(library, 'socialshareprivacy/socialshareprivacy.css')
 
 socialshareprivacy = Resource(library, 'jquery.socialshareprivacy.js',
                               minified='jquery.socialshareprivacy.min.js',

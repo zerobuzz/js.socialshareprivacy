@@ -8,7 +8,7 @@ import os
 # For example, a packaging bugfix release version 1.4.4 of the
 # js.jquery package would be version 1.4.4-1 .
 
-version = '1.3-2'
+version = '1.5'
 
 
 def read(*rnames):
@@ -29,7 +29,7 @@ setup(
     classifiers=[],
     keywords='',
     author='Fanstatic Developers',
-    author_email='fanstatic@googlegroups.com',
+    author_email='mf@zerobuzz.net',
     license='BSD',
     packages=find_packages(),
     namespace_packages=['js'],

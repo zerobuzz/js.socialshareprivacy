@@ -9,6 +9,8 @@ This library packages the jquery plugin
 to integrate facebook, twitter and google+ in a privacy friendly
 way.
 
+This is a develop egg shipped with adhocracy.  Upgrade pending.
+
 Information about using the plugin are contained in
 js/socialshareprivacy/resources/index.html.
 
