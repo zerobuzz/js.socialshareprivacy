@@ -25,7 +25,7 @@
         if(scripts && scripts.length>0) {
             for(var i in scripts) {
                 if(scripts[i].src && scripts[i].src.match(/jquery.socialshareprivacy(\.min)?\.js$/)) {
-                    path = scripts[i].src.replace(/(.*)script\.js$/, '$1');
+                    path = scripts[i].src.replace(/(.*)jquery.socialshareprivacy(\.min)?\.js$/, '$1');
                 }
             }
         }
