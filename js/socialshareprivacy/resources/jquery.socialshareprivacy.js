@@ -98,20 +98,20 @@
             'services' : {
                 'facebook' : {
                     'status'            : 'on',
-                    'dummy_img'         : 'socialshareprivacy/images/dummy_facebook.png',
+                    'dummy_img'         : scriptPath + 'socialshareprivacy/images/dummy_facebook.png',
                     'perma_option'      : 'on',
                     'referrer_track'    : '',
                     'action'            : 'recommend',
                     'layout'            : 'button_count',
                     'sharer'            : {
                         'status'        : 'off',
-                        'dummy_img'     : 'socialshareprivacy/images/dummy_facebook_share_de.png',
-                        'img'           : 'socialshareprivacy/images/dummy_facebook_share_active_de.png'
+                        'dummy_img'     : scriptPath + 'socialshareprivacy/images/dummy_facebook_share_de.png',
+                        'img'           : scriptPath + 'socialshareprivacy/images/dummy_facebook_share_active_de.png'
                     }
                 },
                 'twitter' : {
                     'status'            : 'on',
-                    'dummy_img'         : 'socialshareprivacy/images/dummy_twitter.png',
+                    'dummy_img'         : scriptPath + 'socialshareprivacy/images/dummy_twitter.png',
                     'perma_option'      : 'on',
                     'referrer_track'    : '',
                     'tweet_text'        : getTweetText,
@@ -119,7 +119,7 @@
                 },
                 'gplus' : {
                     'status'            : 'on',
-                    'dummy_img'         : 'socialshareprivacy/images/dummy_gplus.png',
+                    'dummy_img'         : scriptPath + 'socialshareprivacy/images/dummy_gplus.png',
                     'perma_option'      : 'on',
                     'referrer_track'    : '',
                     'size'              : 'medium'
@@ -129,10 +129,10 @@
             'cookie_path'       : '/',
             'cookie_domain'     : document.location.host,
             'cookie_expires'    : '365',
-            'css_path'          : 'socialshareprivacy/socialshareprivacy.css',
+            'css_path'          : scriptPath + 'socialshareprivacy/socialshareprivacy.css',
             'uri'               : getURI,
             'language'          : 'de',
-            'lang_path'         : scriptPath + '/socialshareprivacy/lang/',
+            'lang_path'         : scriptPath + 'socialshareprivacy/lang/',
             'skin'              : 'light',
             'alignment'         : 'horizontal',
             'switch_alignment'  : 'left'
