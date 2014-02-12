@@ -19,6 +19,19 @@
 	// helper functions
 	// 
 
+    var scriptPath = (function () {
+        var scripts = document.getElementsByTagName('SCRIPT');
+        var path = '';
+        if(scripts && scripts.length>0) {
+            for(var i in scripts) {
+                if(scripts[i].src && scripts[i].src.match(/jquery.socialshareprivacy(\.min)?\.js$/)) {
+                    path = scripts[i].src.replace(/(.*)script\.js$/, '$1');
+                }
+            }
+        }
+        return path;
+    })();
+
     // abbreviate at last blank before length and add "\u2026" (horizontal ellipsis)
     function abbreviateText(text, length) {
         var abbreviated = decodeURIComponent(text);
@@ -119,7 +132,7 @@
             'css_path'          : 'socialshareprivacy/socialshareprivacy.css',
             'uri'               : getURI,
             'language'          : 'de',
-            'lang_path'         : 'socialshareprivacy/lang/',
+            'lang_path'         : scriptPath + '/socialshareprivacy/lang/',
             'skin'              : 'light',
             'alignment'         : 'horizontal',
             'switch_alignment'  : 'left'
