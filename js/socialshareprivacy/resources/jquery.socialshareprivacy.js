@@ -15,9 +15,9 @@
 
     "use strict";
 
-	//
-	// helper functions
-	// 
+        //
+        // helper functions
+        //
 
     var scriptPath = (function () {
         var scripts = document.getElementsByTagName('SCRIPT');
@@ -50,7 +50,7 @@
         var metaContent = $('meta[name="' + name + '"]').attr('content');
         return metaContent || '';
     }
-    
+
     // create tweet text from content of <meta name="DC.title"> and <meta name="DC.creator">
     // fallback to content of <title> tag
     function getTweetText() {
@@ -108,12 +108,12 @@
                         'dummy_img'     : 'socialshareprivacy/images/dummy_facebook_share_de.png',
                         'img'           : 'socialshareprivacy/images/dummy_facebook_share_active_de.png'
                     }
-                }, 
+                },
                 'twitter' : {
-                    'status'            : 'on', 
+                    'status'            : 'on',
                     'dummy_img'         : 'socialshareprivacy/images/dummy_twitter.png',
                     'perma_option'      : 'on',
-                    'referrer_track'    : '', 
+                    'referrer_track'    : '',
                     'tweet_text'        : getTweetText,
                     'count'             : 'horizontal'
                 },
@@ -156,7 +156,7 @@
             // IE fix (noetig fuer IE < 9 - wird hier aber fuer alle IE gemacht)
             if (document.createStyleSheet) {
                 document.createStyleSheet(options.css_path);
-            } 
+            }
             else {
                 $('head').append('<link rel="stylesheet" type="text/css" href="' + options.css_path + '" />');
             }
@@ -200,9 +200,9 @@
                 if(options.alignment == 'vertical') {
                     $(context).addClass('vertical');
 
-                    if(options.switch_alignment == 'right' && 
-                        ((facebook_on && options.services.facebook.layout == 'box_count') || (!facebook_on)) && 
-                        ((twitter_on && options.services.twitter.count == 'vertical') || (!twitter_on)) && 
+                    if(options.switch_alignment == 'right' &&
+                        ((facebook_on && options.services.facebook.layout == 'box_count') || (!facebook_on)) &&
+                        ((twitter_on && options.services.twitter.count == 'vertical') || (!twitter_on)) &&
                         ((gplus_on && options.services.gplus.size == 'tall') || (!gplus_on))) {
                         $(context).addClass('switch_right');
                     }
@@ -296,7 +296,7 @@
                 if (gplus_on) {
                     // fuer G+ wird die URL nicht encoded, da das zu einem Fehler fuehrt
                     var gplus_uri = uri + options.services.gplus.referrer_track;
-                    
+
                     // we use the Google+ "asynchronous" code, standard code is flaky if inserted into dom after load
                     var gplus_code = '<div class="g-plusone" data-size="' + options.services.gplus.size + '" data-href="' + gplus_uri + '"></div><script type="text/javascript">window.___gcfg = {lang: "' + language.services.gplus.language + '"}; (function() { var po = document.createElement("script"); po.type = "text/javascript"; po.async = true; po.src = "https://apis.google.com/js/platform.js"; var s = document.getElementsByTagName("script")[0]; s.parentNode.insertBefore(po, s); })(); </script>';
                     var gplus_dummy_btn = '<img src="' + options.services.gplus.dummy_img + '" alt="&quot;Google+1&quot;-Dummy" class="gplus_one_dummy" />';
@@ -421,7 +421,7 @@
                     $(context).on('mouseenter', 'li.settings_info .settings', function () {
                         var timeout_id = window.setTimeout(function () { $container_settings_info.find('.settings_info_menu').removeClass('off').addClass('on'); }, 500);
                         $(this).data('timeout_id', timeout_id);
-                    }); 
+                    });
                     $(context).on('mouseleave', 'li.settings_info', function () {
                         var timeout_id = $(this).data('timeout_id');
                         window.clearTimeout(timeout_id);
@@ -437,7 +437,7 @@
                         if ($('#' + event.target.id + ':checked').length) {
                             cookieSet(cookie_name, 'perma_on', options.cookie_expires, options.cookie_path, options.cookie_domain);
                             $('form fieldset label[for=' + click + ']', context).addClass('checked');
-                        } 
+                        }
                         else {
                             cookieDel(cookie_name, 'perma_on', options.cookie_path, options.cookie_domain);
                             $('form fieldset label[for=' + click + ']', context).removeClass('checked');
